@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Cart.</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col">
+                    <h1>My Shopping Cart.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col mt-3">
+                    {{{body}}}
+                </div>
+                
+                <div class="col table-responsive-md">
+                    <table class="table mt-5">
+                        <thead>
+                            <th scope="col">Item</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                        </thead> 
+                        {{#each cart}}
+                            <tbody>
+                                <tr>    
+                                    <td>{{this.item}}</td>
+                                    <td>{{this.quantity}}</td>
+                                    <td>{{this.price}}</td>
+                                </tr>
+                            </tbody>
+                        {{/each}}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
